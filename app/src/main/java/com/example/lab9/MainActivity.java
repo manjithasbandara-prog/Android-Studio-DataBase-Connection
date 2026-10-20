@@ -15,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button send, view;
+    Button send, view, update;
     EditText nameInput, ageInput;
     DBHelper db;
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         nameInput = findViewById(R.id.name);
         ageInput = findViewById(R.id.age);
         view = findViewById(R.id.view);
+        update = findViewById(R.id.update);
         db = new DBHelper(this);
 
         send.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +62,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, update.class);
+                startActivity(i);
+            }
+        });
 
     }
 }

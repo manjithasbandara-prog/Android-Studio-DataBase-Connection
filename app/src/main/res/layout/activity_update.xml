@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".update">
+    tools:context=".update"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/textView"
@@ -57,10 +58,10 @@
         android:layout_below="@id/nameUpdate"/>
 
     <Button
-        android:id="@+id/viewData"
+        android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Data"
+        android:text="Update Data"
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="447dp"
         android:layout_below="@id/ageUpdate"
@@ -75,6 +76,6 @@
         tools:layout_editor_absoluteX="151dp"
         tools:layout_editor_absoluteY="530dp"
         android:layout_marginTop="20sp"
-        android:layout_below="@id/viewData"
+        android:layout_below="@id/update"
         android:layout_centerInParent="true"/>
 </RelativeLayout>

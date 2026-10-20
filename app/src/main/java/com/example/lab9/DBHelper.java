@@ -43,6 +43,16 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
         return sqLiteDatabase.rawQuery("SELECT * FROM users", null);
     }
+
+    public boolean updateData(int id, String name, int age){
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("name", name);
+        cv.put("age", age);
+
+        int result = db.update("users", cv, "id=?", new String[]{String.valueOf(id)});
+        return result > 0;
+    }
 }
 
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".data_show"
-    android:background="#FAEBA6">
+    android:background="@color/white">
 
     <ListView
         android:layout_width="match_parent"
