@@ -2,7 +2,8 @@ package com.example.lab9;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,46 +39,49 @@ public class MainActivity extends AppCompatActivity {
         delete = findViewById(R.id.delete);
         db = new DBHelper(this);
 
-        send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Animation clickAnim = AnimationUtils.loadAnimation(this, R.anim.fade_in);
 
-                String name = nameInput.getText().toString();
-                String age = ageInput.getText().toString();
+        send.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            String name = nameInput.getText().toString().trim();
+            String ageStr = ageInput.getText().toString().trim();
 
-                long result = db.insertData(name, Integer.parseInt(age));
-                if(result != -1){
-                    Toast.makeText(MainActivity.this, "Inserted with ID: " + result, Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(MainActivity.this, "Insert Failed!", Toast.LENGTH_SHORT).show();
+            if (name.isEmpty() || ageStr.isEmpty()) {
+                Toast.makeText(MainActivity.this, "Please enter both name and age", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            try {
+                int age = Integer.parseInt(ageStr);
+                long result = db.insertData(name, age);
+                if (result != -1) {
+                    Toast.makeText(MainActivity.this, "User saved successfully! ID: " + result, Toast.LENGTH_SHORT).show();
+                    nameInput.setText("");
+                    ageInput.setText("");
+                } else {
+                    Toast.makeText(MainActivity.this, "Failed to save user!", Toast.LENGTH_SHORT).show();
                 }
-
+            } catch (NumberFormatException e) {
+                Toast.makeText(MainActivity.this, "Please enter a valid age number", Toast.LENGTH_SHORT).show();
             }
         });
 
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, data_show.class);
-                startActivity(i);
-            }
+        view.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            Intent i = new Intent(MainActivity.this, data_show.class);
+            startActivity(i);
         });
 
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, update.class);
-                startActivity(i);
-            }
+        update.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            Intent i = new Intent(MainActivity.this, update.class);
+            startActivity(i);
         });
 
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, delete.class);
-                startActivity(i);
-            }
+        delete.setOnClickListener(v -> {
+            v.startAnimation(clickAnim);
+            Intent i = new Intent(MainActivity.this, delete.class);
+            startActivity(i);
         });
-
     }
 }
