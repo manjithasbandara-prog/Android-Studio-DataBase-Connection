@@ -1,5 +1,6 @@
 package com.example.lab9;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button send;
+    Button send, view;
     EditText nameInput, ageInput;
     DBHelper db;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         send = findViewById(R.id.send);
         nameInput = findViewById(R.id.name);
         ageInput = findViewById(R.id.age);
+        view = findViewById(R.id.view);
         db = new DBHelper(this);
 
         send.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Insert Failed!", Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, data_show.class);
+                startActivity(i);
             }
         });
 
