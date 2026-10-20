@@ -13,11 +13,15 @@ A modern, trendy Android application designed with **Material Design 3** and loc
 
 | 1️⃣ Main Dashboard | 2️⃣ View Users List |
 | :---: | :---: |
-| ![Main Dashboard](path/to/main_dashboard.png) <!-- ADD MAIN PAGE SCREENSHOT HERE --> | ![View Users](path/to/view_users.png) <!-- ADD VIEW USERS PAGE SCREENSHOT HERE --> |
+| ![Main Dashboard](<img width="1440" height="3060" alt="Screenshot_2026-10-20-16-11-33-768_com example lab9-edit" src="https://github.com/user-attachments/assets/3b743adb-bb53-46ba-bded-2c7b66963666" />
+) <!-- ADD MAIN PAGE SCREENSHOT HERE --> | ![View Users](<img width="1440" height="3051" alt="Screenshot_2026-10-20-16-12-02-185_com example lab9-edit" src="https://github.com/user-attachments/assets/11b11dcc-0b60-4a14-a4ef-81feb369d382" />
+) <!-- ADD VIEW USERS PAGE SCREENSHOT HERE --> |
 
 | 3️⃣ Update User | 4️⃣ Delete User |
 | :---: | :---: |
-| ![Update User](path/to/update_user.png) <!-- ADD UPDATE PAGE SCREENSHOT HERE --> | ![Delete User](path/to/delete_user.png) <!-- ADD DELETE PAGE SCREENSHOT HERE --> |
+| ![Update User](<img width="1440" height="3071" alt="Screenshot_2026-10-20-16-12-11-869_com example lab9-edit" src="https://github.com/user-attachments/assets/f8ef3cc4-83c8-4bf1-ac7a-9d6653fdc39b" />
+) <!-- ADD UPDATE PAGE SCREENSHOT HERE --> | ![Delete User](<img width="1440" height="3060" alt="Screenshot_2026-10-20-16-12-19-694_com example lab9-edit" src="https://github.com/user-attachments/assets/707ccdcf-1165-410b-828a-5b77e26ec3ac" />
+) <!-- ADD DELETE PAGE SCREENSHOT HERE --> |
 
 <!-- ========================================================================================= -->
 
