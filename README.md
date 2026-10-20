@@ -14,8 +14,8 @@ A modern, trendy Android application designed with **Material Design 3** and loc
 | 1️⃣ Main Dashboard | 2️⃣ View Users List |
 | :---: | :---: |
 | ![Main Dashboard](<img width="1440" height="3060" alt="Screenshot_2026-10-20-16-11-33-768_com example lab9-edit" src="https://github.com/user-attachments/assets/3b743adb-bb53-46ba-bded-2c7b66963666" />
-) <!-- ADD MAIN PAGE SCREENSHOT HERE --> | ![View Users](<img width="1440" height="3051" alt="Screenshot_2026-10-20-16-12-02-185_com example lab9-edit" src="https://github.com/user-attachments/assets/11b11dcc-0b60-4a14-a4ef-81feb369d382" />
-) <!-- ADD VIEW USERS PAGE SCREENSHOT HERE --> |
+)  | ![View Users](<img width="1440" height="3051" alt="Screenshot_2026-10-20-16-12-02-185_com example lab9-edit" src="https://github.com/user-attachments/assets/11b11dcc-0b60-4a14-a4ef-81feb369d382" />
+)  |
 
 | 3️⃣ Update User | 4️⃣ Delete User |
 | :---: | :---: |
