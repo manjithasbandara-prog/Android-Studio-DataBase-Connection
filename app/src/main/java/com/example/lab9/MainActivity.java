@@ -1,8 +1,10 @@
 package com.example.lab9;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     Button send;
-    EditText name, age;
+    EditText nameInput, ageInput;
     DBHelper db;
 
     @Override
@@ -28,11 +30,26 @@ public class MainActivity extends AppCompatActivity {
         });
 
         send = findViewById(R.id.send);
-        name = findViewById(R.id.name);
-        age = findViewById(R.id.age);
+        nameInput = findViewById(R.id.name);
+        ageInput = findViewById(R.id.age);
         db = new DBHelper(this);
 
-        
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String name = nameInput.getText().toString();
+                String age = ageInput.getText().toString();
+
+                long result = db.insertData(name, Integer.parseInt(age));
+                if(result != -1){
+                    Toast.makeText(MainActivity.this, "Inserted with ID: " + result, Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, "Insert Failed!", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
 
 

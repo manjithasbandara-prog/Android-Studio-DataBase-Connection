@@ -54,7 +54,7 @@
 
     <Button
         android:id="@+id/send"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Send"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
 
     <Button
         android:id="@+id/view"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="View Data"
         app:layout_constraintBottom_toBottomOf="parent"
