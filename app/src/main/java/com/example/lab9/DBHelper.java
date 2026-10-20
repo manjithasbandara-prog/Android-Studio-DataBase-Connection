@@ -53,6 +53,12 @@ public class DBHelper extends SQLiteOpenHelper {
         int result = db.update("users", cv, "id=?", new String[]{String.valueOf(id)});
         return result > 0;
     }
+
+    public boolean deleteData(int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+        int result = db.delete("users", "id=?", new String[]{String.valueOf(id)});
+        return result > 0;
+    }
 }
 
 
